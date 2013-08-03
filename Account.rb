@@ -18,7 +18,7 @@ Class AccountName
 		if amount<=0
 			puts "Reposit amount should be greater than 0"
 		else
-			@Balance-=amount
+			@Balance+=amount
 			puts "You have successfully Deposited Rs."#{amount}
 			puts "your current balance is Rs."#{@Balance}
 		end
@@ -30,3 +30,27 @@ Class AccountName
 end
 
 Myaccount= AccountName.new
+until option='n' do
+	puts "select your option"
+	puts "1--> Withdraw"
+	puts "2-->Deposit"
+	puts "3-->Balance Enquiry"
+	choice=gets.chomp
+	case choice
+		when 1
+			puts "enter amount to withdraw"
+			amount=gets.chomp
+			Myaccount.withdraw_money(amount)
+
+		when 2
+			puts "enter amount to deposit"
+			amount=gets.chomp
+			Myaccount.deposit_money(amount)
+		when 3
+			Myaccount.enquire_balance()
+		else	
+			puts "invalid choice"
+	end
+	puts"do you want to continues?(y/n)"
+end
+ 
