@@ -24,6 +24,7 @@ Class AccountName
 		end
  	end
 	def enquire_balance()
+		puts "your current balance is Rs."#{@Balance}	
 	end
 
 end
