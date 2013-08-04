@@ -16,7 +16,7 @@ class AccountName
 	end
  	def deposit_money(amount=0)
 		if amount<=0
-			puts "Reposit amount should be greater than 0"
+			puts "Deposit amount should be greater than 0"
 		else
 			@Balance+=amount
 			puts "You have successfully Deposited Rs.#{amount}"
